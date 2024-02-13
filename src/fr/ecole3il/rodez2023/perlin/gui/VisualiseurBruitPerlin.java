@@ -48,7 +48,7 @@ public class VisualiseurBruitPerlin extends JFrame {
         resolutionField = new JTextField(String.valueOf(DEFAULT_RESOLUTION), 10);
 
         JButton generateButton = new JButton("Générer une image");
-        generateButton.addActionListener(new ActionListener() {
+        generateButton.addActionListener(new ActionListener() { // Le bouton générer qui est écoute le bouton
             @Override
             public void actionPerformed(ActionEvent e) {
                 generateImage();

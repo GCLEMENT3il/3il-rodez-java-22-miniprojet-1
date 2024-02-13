@@ -16,7 +16,9 @@ public abstract class Bruit2D { //Classe Abstraite Bruit2D
     public double getResolution() { return resolution;}
 
     // Mutateur (Setter) de resolution
-    public void setResolution(double resolution) { this.resolution = resolution;}
+    public void setResolution(double resolution) {
+        this.resolution = resolution;
+    }
     
     /**
      * Constructeur de la classe Noise2D.
@@ -42,5 +44,4 @@ public abstract class Bruit2D { //Classe Abstraite Bruit2D
     public long getGraine() {
         return graine;
     }
-
 }
