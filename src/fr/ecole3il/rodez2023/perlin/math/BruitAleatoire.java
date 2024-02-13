@@ -7,13 +7,13 @@ import java.util.Random;
  * Elle utilise la classe Random de Java pour générer des valeurs aléatoires.
  */
 public class BruitAleatoire extends Bruit2D {
-    protected Random randomGenerator; // Instance de la classe Random pour générer des nombres aléatoires
+    private Random randomGenerator; // Instance de la classe Random pour générer des nombres aléatoires
     public BruitAleatoire(long graine, double resolution) {
         super(graine, resolution); // Appel du constructeur de la classe parente Bruit2D
         randomGenerator = new Random(graine); // Initialisation de l'instance Random avec la graine
     }
 
-    @Override
+    @Override // Permet de prendre un classe A et créer une classe B pour prendre la structure de la classe A pour ajouter d'autre variable
     public double bruit2D(double x, double y) {
         return randomGenerator.nextDouble(); // Retourne un nombre aléatoire de type double entre 0.0 (inclus) et 1.0 (exclus)
     }

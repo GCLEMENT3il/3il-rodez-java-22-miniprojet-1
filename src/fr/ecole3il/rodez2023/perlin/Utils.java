@@ -48,12 +48,17 @@ public class Utils {
      * @author philibert roquart, fainéant
      */
     public static int[] melanger(int[] tab, long seed) {
-        // Mélanger le tableau de permutation en utilisant 
-    	// ...
-    	// Bon, je le ferai plus tard, je vais réviser l'espagnol
-    	// Je mets ça, ça marchera bien en attendant
-    	// tant pis
-        return tab;
+        Random rand = new Random(seed);// Création d'une instance de la classe (Random) avec (seed)
+
+        for (int i = tab.length - 1; i > 0; i--) {
+            int index = rand.nextInt(i + 1);
+
+            // Permet de mélanger les éléments du tableau de manière aléatoire en échange (i) et l'index aléatoire
+            int temp = tab[index]; // Stockage temporaire de la valeur de l'élément à l'index aléatoire
+            tab[index] = tab[i];// Assigne la valeur (i) à l'élément à l'index aléatoire
+            tab[i] = temp;// Assig la valeur temporaire (ancienne valeur de l'élément à l'index aléatoire) à l'élément (i)
+        }
+        return tab;  // Retourne le tableau mélangé
     }
 
     /**
@@ -65,8 +70,7 @@ public class Utils {
      * @author philibert roquart, fainéant
      */
     public static double min(int width, int height) {
-    	// pas le temps, j'ai mes exos de chimie à finir
-    	return 1;
+        return Math.min(width, height); // Prend la valeur le minimum entre les deux valeurs
     }
 
     /**
