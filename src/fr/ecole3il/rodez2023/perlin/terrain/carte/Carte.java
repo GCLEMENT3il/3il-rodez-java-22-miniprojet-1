@@ -8,9 +8,13 @@ public class Carte {
     private int largeur;
     private int hauteur;
     public Carte(String nouvelleCarte, int largeur, int hauteur, GenerateurPerlin generateurAleatoire) {
+        this.largeur = largeur;
+        this.hauteur = hauteur;
     }
 
     public Carte(String nouvelleCarte, int largeur, int hauteur, GenerateurAleatoire generateurAleatoire) {
+        this.largeur = largeur;
+        this.hauteur = hauteur;
     }
 
     public Carte(String s) {
