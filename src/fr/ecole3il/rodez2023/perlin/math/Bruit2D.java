@@ -13,7 +13,9 @@ public abstract class Bruit2D { //Classe Abstraite Bruit2D
     private double resolution; // Ajout de l'attribut resolution
 
     // Accesseur (Getter) de resolution
-    public double getResolution() { return resolution;}
+    public double getResolution() {
+        return resolution;
+    }
 
     // Mutateur (Setter) de resolution
     public void setResolution(double resolution) {

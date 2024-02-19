@@ -112,7 +112,7 @@ public class VisualiseurBruitPerlin extends JFrame {
         
         
         ////////// CODE À MODIFIER 
-        noiseImage = new ImageBruit(new BruitAleatoire(seed, resolution)); // Permet d'appeler la classe et utiliser BruitAleatoire
+        noiseImage = new ImageBruit(new BruitPerlin2D(seed, resolution)); // Permet d'appeler la classe et utiliser BruitPerlin2D (car pas de résolution dans le BruitAleatoire)
         
         ////////// FIN CODE À MODIFIER
         tickImageButton.setEnabled(true); // Passe le bouton a true pour permettre de générer l'image
