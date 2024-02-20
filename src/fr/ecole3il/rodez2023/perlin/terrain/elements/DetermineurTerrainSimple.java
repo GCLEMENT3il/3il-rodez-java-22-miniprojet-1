@@ -1,5 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
+import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
+
 public class DetermineurTerrainSimple implements DetermineurTerrain { // Permet de dire en focntion des paramètre (Hydrometrie, Température et Altitude) de choisir le biome
 
     @Override
@@ -27,5 +29,10 @@ public class DetermineurTerrainSimple implements DetermineurTerrain { // Permet 
         } else {
             return TypeTerrain.OCEAN;
         }
+    }
+
+    @Override
+    public TypeTerrain determinerTerrain(double altitude, double hydrometrie, double temperature) {
+        return null;
     }
 }
