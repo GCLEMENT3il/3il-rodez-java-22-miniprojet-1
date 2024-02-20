@@ -32,20 +32,6 @@ public enum TypeTerrain {
         return image;
     }
 
-    @Override
-    public String toString() {
-        return switch (this) {
-            case OCEAN -> "Océan";
-            case PLAINE -> "Plaine";
-            case FORET_FEUILLUS -> "Forêt de feuillus";
-            case TOUNDRA -> "Toundra";
-            case FORET_CONIFÈRES -> "Forêt de conifères";
-            case MONTAGNE -> "Montagne";
-            case DESERT -> "Désert";
-            case COLLINES -> "Collines";
-            case MARAIS -> "Marais";
-        };
-    }
 
     public int getSymbole() {
         return Symbole;

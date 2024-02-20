@@ -6,7 +6,7 @@ import fr.ecole3il.rodez2023.perlin.terrain.visualisation.VisualiseurTerrain;
 
 public class VisualiseurTerrainEnonce extends VisualiseurTerrain {
 	public VisualiseurTerrainEnonce(Carte c) {
-		super(new DetermineurTerrainEnonce(), c);
+		super(c, new DetermineurTerrainEnonce());
 	}
 
     public TypeTerrain getTypeTerrain(int x, int y) {
