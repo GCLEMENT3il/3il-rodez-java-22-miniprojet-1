@@ -19,6 +19,7 @@ public enum TypeTerrain {
     private final String nomImage;
 
     private BufferedImage image;
+    private int Symbole;
 
     TypeTerrain(String nomImage) {
         this.nomImage = nomImage;
@@ -44,5 +45,9 @@ public enum TypeTerrain {
             case COLLINES -> "Collines";
             case MARAIS -> "Marais";
         };
+    }
+
+    public int getSymbole() {
+        return Symbole;
     }
 }
