@@ -88,6 +88,7 @@ public class VisualiseurCarteTerrain extends JFrame {
 				if (carte==null) {
 					return; // Permet de dire que quand pas de carte alors rien faire
 				}
+				vte = new VisualiseurTerrainEnonce(carte);
 		        int tuileWidth = cartePanel.getWidth() / carte.getLargeur();
 		        int tuileHeight = cartePanel.getHeight() / carte.getHauteur();
 
