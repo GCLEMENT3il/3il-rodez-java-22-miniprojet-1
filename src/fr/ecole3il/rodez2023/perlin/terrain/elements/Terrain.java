@@ -1,12 +1,13 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
-import fr.ecole3il.rodez2023.perlin.terrain.elements.MauvaiseValeurException;
+import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 
 public class Terrain {
 
     private final double hydrometrie;
     private final double temperature;
     private final double altitude;
+
 
     public Terrain(double hydrometrie, double temperature, double altitude) throws MauvaiseValeurException {
         if (hydrometrie < 0 || hydrometrie > 1) {
@@ -33,5 +34,8 @@ public class Terrain {
 
     public double getAltitude() {
         return altitude;
+    }
+    public TypeTerrain getTypeTerrain(DetermineurTerrain dt) {
+        return dt.determinerTerrain(altitude,hydrometrie,temperature);
     }
 }

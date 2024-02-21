@@ -9,8 +9,6 @@ import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
  */
 public interface DetermineurTerrain {
 
-    TypeTerrain getTypeTerrain(Terrain terrain);
-
     /**
      * Determines the type of terrain based on the given altitude, hydrometrie, and
      * temperature values.

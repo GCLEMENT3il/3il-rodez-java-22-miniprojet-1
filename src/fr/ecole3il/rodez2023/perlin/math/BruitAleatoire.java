@@ -10,7 +10,7 @@ public class BruitAleatoire extends Bruit2D {
     private final Random randomGenerator; // Instance de la classe Random pour générer des nombres aléatoires
     public BruitAleatoire(long graine, double resolution) {
         super(graine, resolution); // Appel du constructeur de la classe parente Bruit2D
-        randomGenerator = new Random(graine); // Initialisation de l'instance Random avec la graine
+        randomGenerator = new Random(); // Initialisation de l'instance Random
     }
 
     @Override // Permet de prendre un classe A et créer une classe B pour prendre la structure de la classe A pour ajouter d'autre variable

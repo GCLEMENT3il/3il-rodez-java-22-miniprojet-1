@@ -85,6 +85,9 @@ public class VisualiseurCarteTerrain extends JFrame {
 		cartePanel.addMouseMotionListener(new MouseAdapter() {
 		    @Override
 		    public void mouseMoved(MouseEvent e) {
+				if (carte==null) {
+					return; // Permet de dire que quand pas de carte alors rien faire
+				}
 		        int tuileWidth = cartePanel.getWidth() / carte.getLargeur();
 		        int tuileHeight = cartePanel.getHeight() / carte.getHauteur();
 
@@ -117,7 +120,7 @@ public class VisualiseurCarteTerrain extends JFrame {
 		        if (x >= 0 && x < carte.getLargeur() && y >= 0 && y < carte.getHauteur()) {
 
 		            // Crée le contenu à afficher dans la fenêtre modale
-		            String contenu = "Altitude: " + vte.getAltitudeAffichee(x, y) + "\nHydrométrie: " + vte.getHydrometrieAffichee(x, y)+ "\nTempérature: " + vte.getTemperatureAffichee(x, y);
+		            String contenu = "Altitude: " + vte.getAltitudeAffichage(carte.getTerrain(x,y).getAltitude()) + "\nHydrométrie: " + vte.getHydrometrieAffichage(carte.getTerrain(x,y).getHydrometrie())+ "\nTempérature: " + vte.getTemperatureAffichage(carte.getTerrain(x,y).getTemperature());
 
 		            // Affiche une fenêtre modale avec les informations de la tuile
 		            JOptionPane.showMessageDialog(cartePanel, contenu, "Informations de la tuile", JOptionPane.INFORMATION_MESSAGE);
@@ -149,7 +152,7 @@ public class VisualiseurCarteTerrain extends JFrame {
 		        }
 		    }
 		});
-		
+
 		JMenuItem enregistrerItem = new JMenuItem("Enregistrer la carte");
 		enregistrerItem.addActionListener(new ActionListener() {
 		    @Override

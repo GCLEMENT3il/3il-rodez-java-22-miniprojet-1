@@ -16,24 +16,13 @@ public enum TypeTerrain {
     COLLINES("hills.png"),
     MARAIS("marsh.png");
 
-    private final String nomImage;
-
-    private BufferedImage image;
-    private int Symbole;
+    private String nomImage;
 
     TypeTerrain(String nomImage) {
         this.nomImage = nomImage;
     }
 
     public BufferedImage getImage() {
-        if (image == null) {
-            image = Utils.chargerTuile(nomImage);
-        }
-        return image;
-    }
-
-
-    public int getSymbole() {
-        return Symbole;
+        return Utils.chargerTuile(nomImage);
     }
 }
