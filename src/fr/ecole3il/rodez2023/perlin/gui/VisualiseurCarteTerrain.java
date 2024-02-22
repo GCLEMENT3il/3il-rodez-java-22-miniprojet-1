@@ -56,11 +56,11 @@ public class VisualiseurCarteTerrain extends JFrame {
         int tuileWidth = panelWidth / largeur;
         int tuileHeight = panelHeight / hauteur;
 
-        for (int y = 0; y < hauteur; y++) {
-            for (int x = 0; x < largeur; x++) {
-                TypeTerrain type = vte.getTypeTerrain(x, y);
-                BufferedImage image = type.getImage();
-                g.drawImage(image, x * tuileWidth, y * tuileHeight, tuileWidth, tuileHeight, null);
+        for (int y = 0; y < hauteur; y++) { // For eight pour y exécute le code qui a lui même un for eight
+            for (int x = 0; x < largeur; x++) { // puis for For eight pour x
+                TypeTerrain type = vte.getTypeTerrain(x, y); // Quel type de terrain nous avons par rapport au paramètre (altitude,...)
+                BufferedImage image = type.getImage(); // Prendre l'image par rapport au nom du type de terrain
+                g.drawImage(image, x * tuileWidth, y * tuileHeight, tuileWidth, tuileHeight, null); // Afficher l'image ou il faut dans l'application
             }
         }
     }

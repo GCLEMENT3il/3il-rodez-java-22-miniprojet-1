@@ -4,12 +4,12 @@ import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 
 public class Terrain {
 
-    private final double hydrometrie;
     private final double temperature;
+    private final double hydrometrie;
     private final double altitude;
 
 
-    public Terrain(double hydrometrie, double temperature, double altitude) throws MauvaiseValeurException {
+    public Terrain( double altitude, double hydrometrie, double temperature) throws MauvaiseValeurException {
         if (hydrometrie < 0 || hydrometrie > 1) {
             throw new MauvaiseValeurException("Hydrométrie invalide : " + hydrometrie);
         }

@@ -3,6 +3,8 @@ package fr.ecole3il.rodez2023.perlin.terrain.generation;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 import fr.ecole3il.rodez2023.perlin.math.BruitAleatoire;
 
+import java.util.Random;
+
 public class GenerateurAleatoire extends GenerateurCarte {
 
     /**
@@ -23,21 +25,17 @@ public class GenerateurAleatoire extends GenerateurCarte {
      */
     @Override
     protected Terrain genererTerrain(int i, int j, int largeur, int hauteur) {
-        try {
             // Initialisation d'un générateur de bruit aléatoire avec la graine du générateur
             // La résolution est fixée à 1.0
             BruitAleatoire bruitAleatoire = new BruitAleatoire(this.getGraine(), 1.0);
 
             // Utilisation du bruit aléatoire pour générer l'altitude, l'hydrométrie et la température
-            double altitude = bruitAleatoire.bruit2D((double) i / largeur, (double) j / hauteur);
-            double hydrometrie = bruitAleatoire.bruit2D((double) i / largeur, (double) j / hauteur);
-            double temperature = bruitAleatoire.bruit2D((double) i / largeur, (double) j / hauteur);
+            //double altitude = Double.parseDouble("-0.5");
+            double altitude = new Random().nextFloat(-1,1);
 
+            double hydrometrie = new Random().nextFloat(0,1);
+            double temperature = new Random().nextFloat(0,1);
             return new Terrain(altitude, hydrometrie, temperature);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     /**
