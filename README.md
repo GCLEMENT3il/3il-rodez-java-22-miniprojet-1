@@ -1,4 +1,5 @@
-On peut utiliser le "VisualiseurBruitPerlin" et utiliser "VisualiseurCarteTerrain" avec la génération de carte aléatoire qui marche.
+On peut utiliser le "VisualiseurBruitPerlin" et utiliser "VisualiseurCarteTerrain" avec le "GenerateurAleatoire" qui marche et non le "GenerateurPerlin".
+J'ai aussi deux testes unitaire (tester l'affichage altitude pour tester les ifs else du programme "AltitudeAffichee" et test bonne valeur qui est générée pour le programme "GenerateurAleatoire").
 *********************
 Question : pourquoi l'attribut graine est-il en final ?
 - Cela permet que l'attribut "graine" soit d'immuabilité, ce qu'il veut dire que cette variable va prendre une valeur qui ne va pas être modifiée tout au long de l'exécution du programme.
