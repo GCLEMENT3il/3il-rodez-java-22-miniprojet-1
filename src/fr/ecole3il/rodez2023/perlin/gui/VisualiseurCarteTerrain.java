@@ -56,14 +56,19 @@ public class VisualiseurCarteTerrain extends JFrame {
         int tuileWidth = panelWidth / largeur;
         int tuileHeight = panelHeight / hauteur;
 
-        for (int y = 0; y < hauteur; y++) { // For eight pour y exécute le code qui a lui même un for eight
-            for (int x = 0; x < largeur; x++) { // puis for For eight pour x
-                TypeTerrain type = vte.getTypeTerrain(x, y); // Quel type de terrain nous avons par rapport au paramètre (altitude,...)
+        for (int y = 0; y < hauteur; y++) { // For eight pour y exécute le code pour le paramètre x qui a lui même un for eight
+            for (int x = 0; x < largeur; x++) {
+                TypeTerrain type = vte.getTypeTerrain(x, y); // Quel type de terrain nous avons par rapport au paramètre (altitude, hydrométrie, température)
                 BufferedImage image = type.getImage(); // Prendre l'image par rapport au nom du type de terrain
                 g.drawImage(image, x * tuileWidth, y * tuileHeight, tuileWidth, tuileHeight, null); // Afficher l'image ou il faut dans l'application
             }
         }
     }
+
+	/**
+	 * Constructeur de la classe VisualiseurCarteTerrain.
+	 * Crée une fenêtre pour visualiser une carte de terrain.
+	 */
 	public VisualiseurCarteTerrain() {
 		VisualiseurCarteTerrain monObjet = this;
 		setTitle("Visualiseur de Carte");
@@ -190,6 +195,16 @@ public class VisualiseurCarteTerrain extends JFrame {
         add(terrainLabel, BorderLayout.SOUTH); // Ajout du label en bas de la fenêtre
 	}
 
+	/**
+	 * Affiche une fenêtre de dialogue pour générer une carte avec des paramètres choisis par l'utilisateur.
+	 * Les paramètres sont la largeur, la hauteur, la graine aléatoire et le générateur de terrain.
+	 * @param carte La carte à générer.
+	 * @param g L'objet Graphics pour dessiner.
+	 * @param panelWidth La largeur du panneau.
+	 * @param panelHeight La hauteur du panneau.
+	 * @param monObjet L'objet VisualiseurCarteTerrain.
+	 */
+
 	private void genererCarteDialogue() {
 		JTextField largeurField = new JTextField(5);
 		JTextField hauteurField = new JTextField(5);
@@ -229,6 +244,10 @@ public class VisualiseurCarteTerrain extends JFrame {
 		}
 	}
 
+	/**
+	 * Méthode principale pour lancer l'application.
+	 * @param args Les arguments de la ligne de commande.
+	 */
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() -> {
 			VisualiseurCarteTerrain visualiseur = new VisualiseurCarteTerrain();

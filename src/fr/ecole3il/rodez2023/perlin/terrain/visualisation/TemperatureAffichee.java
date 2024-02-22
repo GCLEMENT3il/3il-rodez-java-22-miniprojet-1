@@ -1,5 +1,9 @@
 package fr.ecole3il.rodez2023.perlin.terrain.visualisation;
 
+/**
+ * Cette énumération représente les différentes températures affichées sur la carte.
+ * Elle permet de déterminer la température affichée en fonction de la température réelle.
+ */
 public enum TemperatureAffichee {
 
     FROID,

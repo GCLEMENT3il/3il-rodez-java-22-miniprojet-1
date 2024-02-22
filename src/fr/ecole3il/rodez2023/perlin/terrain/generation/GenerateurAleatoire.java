@@ -30,18 +30,10 @@ public class GenerateurAleatoire extends GenerateurCarte {
             BruitAleatoire bruitAleatoire = new BruitAleatoire(this.getGraine(), 1.0);
 
             // Utilisation du bruit aléatoire pour générer l'altitude, l'hydrométrie et la température
-            //double altitude = Double.parseDouble("-0.5");
+            //double altitude = Double.parseDouble("-0.5"); // Pour voir si le code fonctionne avec des valeurs bien précises
             double altitude = new Random().nextFloat(-1,1);
-
             double hydrometrie = new Random().nextFloat(0,1);
             double temperature = new Random().nextFloat(0,1);
             return new Terrain(altitude, hydrometrie, temperature);
     }
-
-    /**
-     * Méthode pour générer un terrain aléatoire.
-     * Cette méthode est héritée de la classe GenerateurCarte.
-     * Elle ne sera pas utilisée dans cette implémentation.
-     * @return null car non utilisée dans cette implémentation.
-     */
 }

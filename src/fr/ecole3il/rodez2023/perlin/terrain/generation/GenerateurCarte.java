@@ -13,6 +13,7 @@ public abstract class GenerateurCarte {
 
     /**
      * Constructeur du générateur de carte.
+     * @param graine La graine utilisée pour la génération de la carte.
      */
     public GenerateurCarte(long graine) {
         this.graine = graine;

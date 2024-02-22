@@ -18,7 +18,6 @@ import fr.ecole3il.rodez2023.perlin.math.BruitAleatoire;
 import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;
 
 /**
- * 
  * @author proussille
  * Classe représentant une fenêtre pour générer des images de bruit de Perlin.
  */
@@ -36,7 +35,13 @@ public class VisualiseurBruitPerlin extends JFrame {
     private ImageBruit noiseImage; // Instance pour manipuler l'image de bruit de Perlin
 
     /**
-     * Constructeur par défaut pour initialiser la fenêtre et les composants.
+    Fait appel à la classe ImageBruit pour générer l'image de bruit de Perlin
+    @param seedField Champ de texte pour la graine
+    @param resolutionField Champ de texte pour la résolution
+    @param imageLabel Étiquette pour afficher l'image générée
+    @param tickImageButton Bouton pour mettre à jour l'image
+    @param noiseImage Instance pour manipuler l'image de bruit de Perlin
+    @autor proussille
      */
     public VisualiseurBruitPerlin() {
         setTitle("Génération d'image de bruit de Perlin");
@@ -87,13 +92,25 @@ public class VisualiseurBruitPerlin extends JFrame {
         setLocationRelativeTo(null);
     }
 
-
+    /**
+     * Méthode pour mettre à jour l'image de bruit de Perlin.
+     * @autor proussille
+    */
     private void tickImage() {
         BufferedImage image = noiseImage.getNoiseImage(WIDTH, HEIGHT);
         ImageIcon imageIcon = new ImageIcon(image);
         imageLabel.setIcon(imageIcon);
     }
 
+
+    /**
+     * Méthode pour générer une image de bruit de Perlin.
+     * @param seedText Graine pour initialiser le générateur de bruit.
+     * @param resolutionText Résolution pour l'image de bruit.
+     * @autor proussille
+     * @version 1.0
+     * @return void
+     */
     private void generateImage() {
         String seedText = seedField.getText();
         long seed = seedText.isEmpty() ? System.currentTimeMillis() : Long.parseLong(seedText);
@@ -115,9 +132,9 @@ public class VisualiseurBruitPerlin extends JFrame {
     }
 
     /**
-     * Méthode principale pour lancer l'application.
-     *
+     * Méthode principale pour lancer l'application VisualiseurBruitPerlin.
      * @param args Arguments de la ligne de commande (non utilisés dans cette application).
+     * @autor proussille
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {

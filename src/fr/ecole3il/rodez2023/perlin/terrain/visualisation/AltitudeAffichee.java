@@ -1,5 +1,10 @@
 package fr.ecole3il.rodez2023.perlin.terrain.visualisation;
 
+/**
+ * Enumération représentant les différentes altitudes affichées sur la carte.
+ * Les altitudes sont classées en 4 catégories : basse, moyenne, élevée et fond marin.
+ * La catégorie est déterminée en fonction de la valeur de l'altitude.
+ */
 public enum AltitudeAffichee {
 
     BASSE,

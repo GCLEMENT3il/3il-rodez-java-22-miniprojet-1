@@ -2,6 +2,13 @@ package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
 import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 
+/**
+ * Classe représentant les valeurs acceptables pour les variables température, hydrométrie et altitude
+ * @param temperature la température
+ * @param hydrometrie l'hydrométrie
+ * @param altitude l'altitude
+ */
+
 public class Terrain {
 
     private final double temperature;

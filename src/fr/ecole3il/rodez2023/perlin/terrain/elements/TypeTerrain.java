@@ -4,6 +4,16 @@ import fr.ecole3il.rodez2023.perlin.Utils;
 
 import java.awt.image.BufferedImage;
 
+
+/**
+ * Enumération des types de terrain
+ * @param nomImage le nom de l'image
+ * @return l'image correspondante
+ * @throws IOException si l'image n'est pas trouvée
+ * @throws IllegalArgumentException si le nom de l'image est incorrect
+ */
+
+
 public enum TypeTerrain {
 
     OCEAN("ocean.png"),

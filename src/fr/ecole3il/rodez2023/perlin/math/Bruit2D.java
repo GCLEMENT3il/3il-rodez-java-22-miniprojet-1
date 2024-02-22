@@ -25,6 +25,7 @@ public abstract class Bruit2D { //Classe Abstraite Bruit2D
     /**
      * Constructeur de la classe Noise2D.
      * @param graine La graine utilisée pour initialiser le générateur de bruit.
+     * @param resolution La résolution du bruit.
      */
     public Bruit2D(long graine, double resolution) {
         this.graine = graine;

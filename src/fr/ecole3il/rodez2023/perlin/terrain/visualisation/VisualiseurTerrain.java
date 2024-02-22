@@ -4,6 +4,17 @@ import fr.ecole3il.rodez2023.perlin.terrain.carte.Carte;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
 
+/**
+ * Cette classe représente le visualiseur de terrain.
+ * Elle permet de visualiser les différents éléments de la carte.
+ * @param carte la carte à visualiser
+ * @param determineurTerrain le détermineur de terrain
+ * @param getAltitudeAffichage la méthode pour obtenir l'altitude affichée
+ * @param getHydrometrieAffichage la méthode pour obtenir l'hydrométrie affichée
+ * @param getTemperatureAffichage la méthode pour obtenir la température affichée
+ * @param getTypeTerrain la méthode pour obtenir le type de terrain
+ * @return le visualiseur de terrain
+ */
 public class VisualiseurTerrain {
 
     private final Carte carte;

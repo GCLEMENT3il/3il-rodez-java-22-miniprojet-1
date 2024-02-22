@@ -1,5 +1,9 @@
 package fr.ecole3il.rodez2023.perlin.terrain.visualisation;
 
+/**
+ * Cette énumération représente les différentes hydrométries affichées sur la carte.
+ * Elle permet de déterminer l'hydrométrie affichée en fonction de l'hydrométrie réelle.
+ */
 public enum HydrometrieAffichee {
 
     SEC,

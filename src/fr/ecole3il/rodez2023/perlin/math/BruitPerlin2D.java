@@ -33,6 +33,14 @@ public class BruitPerlin2D extends Bruit2D {
 		this.permutation = Utils.melanger(PERMUTATION, graine);
 	}
 
+	/**
+	 * Génère une valeur de bruit de Perlin en deux dimensions pour les coordonnées
+	 * (x, y).
+	 * 
+	 * @param x La coordonnée x.
+	 * @param y La coordonnée y.
+	 * @return La valeur de bruit de Perlin pour les coordonnées (x, y).
+	 */
 	@Override
 	public double bruit2D(double x, double y) {
 		double tempX, tempY;
