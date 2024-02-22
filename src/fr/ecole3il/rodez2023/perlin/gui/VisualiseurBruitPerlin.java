@@ -87,18 +87,13 @@ public class VisualiseurBruitPerlin extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    /**
-     * Méthode pour mettre à jour l'image affichée en fonction de l'avancement du bruit de Perlin.
-     */
+
     private void tickImage() {
         BufferedImage image = noiseImage.getNoiseImage(WIDTH, HEIGHT);
         ImageIcon imageIcon = new ImageIcon(image);
         imageLabel.setIcon(imageIcon);
     }
 
-    /**
-     * Méthode pour générer une nouvelle image de bruit de Perlin en fonction des paramètres saisis.
-     */
     private void generateImage() {
         String seedText = seedField.getText();
         long seed = seedText.isEmpty() ? System.currentTimeMillis() : Long.parseLong(seedText);
